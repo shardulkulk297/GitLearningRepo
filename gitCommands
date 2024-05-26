@@ -1,0 +1,59 @@
+. Process of Commiting
+
+Make change
+git status
+git add changedfilename/.
+git commit -m "provide message for a change"
+git log //see the commits
+
+. To stash or save the changes without commiting 
+
+Make change
+git status
+git add changedfilename/.
+git stash
+
+. To host your project on github (Add first Changes)
+
+git remote add origin repourl //to connect the repo to the project
+git remote -v //to see connected url's
+git push origin master(branch name) //push the files to repo
+
+. To Do a contribution or pull request on github
+
+Fork the repository
+clone it
+check status
+git status
+add upstream(project to which you want to contribute) url bY: git remote add upstream upstreamurl
+create a new branch
+git branch newbranch
+git checkout newbranch(head will point to that branch)
+make changes to files 
+add the changes
+git add .
+git commit -m "message"
+after commiting make a pull request
+(make sure that for each pull request you have to create a new branch)
+
+. To maintain your forked directory and the main project's commits that you have made
+
+
+git fetch --all --prune
+git reset --hard upstram/main (reset main branch of origin to main branch of upstream)
+git push origin main
+
+WE CAN ALSO USE 
+git pull upstream main
+git push origin main
+
+
+. Squashing or merging multiple commits
+
+git rebase - i idofcommitmadebeforethecommitsyouwanttomerge
+
+pick -- (the one with which commits will be merged)
+s --  (squash the commits that you want to merged with picked one)
+s --
+
+
